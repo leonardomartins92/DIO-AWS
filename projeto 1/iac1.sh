@@ -7,7 +7,7 @@ mkdir /adm
 mkdir /ven
 mkdir /sec
 
-echo "Criando grupos de usuários..."
+echo "Criando grupos..."
 
 groupadd GRP_ADM
 groupadd GRP_VEN
@@ -15,7 +15,7 @@ groupadd GRP_SEC
 
 echo "Criando usuários..."
 
-useradd carlos -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -G GRP_ADM
+useradd mario -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -G GRP_ADM
 useradd maria -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -G GRP_ADM
 useradd joao -m -s /bin/bash -p $(openssl passwd -crypt Senha123) -G GRP_ADM
 
@@ -38,5 +38,5 @@ chmod 770 /ven
 chmod 770 /sec
 chmod 777 /publico
 
-echo "Fim....."
+echo "Fim"
 
